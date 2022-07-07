@@ -17,6 +17,8 @@ const NavBar = () => {
         backgroundColor: 'white',
         boxShadow: 'none',
         padding: '16px',
+        position: 'fixed',
+        top: 0,
         transition: 'none',
       }}
     >
