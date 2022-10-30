@@ -6,6 +6,11 @@ import Router from './components/Router'
 
 const App = () => {
   const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#5b16db',
+      },
+    },
     typography: {
       fontFamily: "'Lato', 'Roboto', 'Helvetica Neue', sans-serif",
     },
