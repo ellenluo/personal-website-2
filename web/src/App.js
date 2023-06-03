@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
 
-import NavBar from './components/NavBar'
+import Navigation from './components/Navigation'
 import Router from './components/Router'
 
 const App = () => {
@@ -16,12 +16,13 @@ const App = () => {
     },
   })
   const responsiveTheme = responsiveFontSizes(theme)
+  const [activePage, setActivePage] = useState('home')
 
   return (
     <ThemeProvider theme={responsiveTheme}>
       <React.Fragment>
-        <NavBar />
-        <Router />
+        <Navigation activePage={activePage} setActivePage={setActivePage} />
+        <Router setActivePage={setActivePage} />
       </React.Fragment>
     </ThemeProvider>
   )

@@ -3,9 +3,13 @@ import { Navigate, Routes, Route, Link } from 'react-router-dom'
 
 import Main from '../pages/Main'
 
-const Router = () => (
+type Props = {
+  setActivePage: (page: string) => {}
+}
+
+const Router = ({ setActivePage }: Props) => (
   <Routes>
-    <Route element={<Main />} path="/home" />
+    <Route element={<Main setActivePage={setActivePage} />} path="/home" />
     <Route path="*" element={<Navigate to="/home" replace />} />
   </Routes>
 )
