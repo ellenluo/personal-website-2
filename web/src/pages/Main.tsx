@@ -19,7 +19,7 @@ const Main = ({ setActivePage }: Props) => {
   const ArrowButton = ({ targetPage, up }: ArrowButtonProps) => (
     <Box>
       <IconButton
-        color="primary"
+        color="info"
         edge="start"
         disableRipple
         onClick={() => {
@@ -110,8 +110,8 @@ const Main = ({ setActivePage }: Props) => {
               profile.
             </Typography>
             <Typography variant="body1">
-              I also spend time climbing mountains. I have summited the Matterhorn, Mt Rainier, Mt
-              Baker, Mt Adams and Mt Shasta, all unguided. I hope to dive more into
+              I also spend time climbing and exploring mountains. Some of my favorite mountain
+              ranges include the Cascades, the Sierras and the Rockies. I hope to dive more into
               splitboard-mountaineering and ice climbing in the future.
             </Typography>
             <Typography variant="body1">
@@ -119,7 +119,7 @@ const Main = ({ setActivePage }: Props) => {
               <Link href="https://www.instagram.com/ellenn_luo/" target="_blank" rel="noreferrer">
                 Instagram
               </Link>
-              . I have also recently started to write trip reports. You can find them here.
+              .
             </Typography>
             <ArrowButton targetPage="work" up />
           </Stack>

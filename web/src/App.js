@@ -10,9 +10,15 @@ const App = () => {
       primary: {
         main: '#5b16db',
       },
+      info: {
+        main: '#333333'
+      },
     },
     typography: {
       fontFamily: "'Lato', 'Roboto', 'Helvetica Neue', sans-serif",
+      allVariants: {
+        color: '#333333'
+      }
     },
   })
   const responsiveTheme = responsiveFontSizes(theme)
