@@ -12,7 +12,7 @@ const Navigation = ({ activePage, setActivePage }: Props) => {
     color: 'text.primary',
     textTransform: 'capitalize',
     transition: 'color 0.5s ease',
-    width: 110,
+    width: 100,
   }
   const activeStyle = {
     ...buttonStyle,
@@ -37,7 +37,7 @@ const Navigation = ({ activePage, setActivePage }: Props) => {
         zIndex: 1000,
       }}
     >
-      <Toolbar>
+      <Toolbar disableGutters>
         <Button
           disabled={activePage === 'home'}
           onClick={() => onClickNav('home')}
