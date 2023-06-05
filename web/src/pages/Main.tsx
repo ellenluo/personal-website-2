@@ -1,7 +1,16 @@
 import React from 'react'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
-import { Box, Container, IconButton, Link, Stack, Typography } from '@mui/material'
+import {
+  Box,
+  Container,
+  IconButton,
+  ImageList,
+  ImageListItem,
+  Link,
+  Stack,
+  Typography,
+} from '@mui/material'
 import { Element } from 'react-scroll'
 
 import { scrollTo } from '../utils'
@@ -42,6 +51,17 @@ const Main = ({ setActivePage }: Props) => {
               I'm a software engineer, climber and mountaineer based out of the SF Bay Area,
               California.
             </Typography>
+            <ImageList cols={3}>
+              <ImageListItem>
+                <img src="/assets/scarface.jpg" />
+              </ImageListItem>
+              <ImageListItem>
+                <img src="/assets/professional.jpg" />
+              </ImageListItem>
+              <ImageListItem>
+                <img src="/assets/lassen.jpg" />
+              </ImageListItem>
+            </ImageList>
             <ArrowButton targetPage="work" up={false} />
           </Stack>
         </Container>
@@ -53,12 +73,12 @@ const Main = ({ setActivePage }: Props) => {
               Work
             </Typography>
             <Typography variant="body1">
-              I currently work as a Senior Software Engineer at Robinhood. I build large-scale
-              systems for dynamic configuration and experimentation. Previously I have interned at
-              Meta, Airbnb and Kloudless.
+              I currently work as a Senior Software Engineer at Robinhood. I help build and maintain
+              large-scale systems for both dynamic configuration and experimentation. Previously I
+              interned at Meta, Airbnb and Kloudless while studying EECS at UC Berkeley.
             </Typography>
             <Typography variant="body1">
-              I researched with Berkeley RISELab on{' '}
+              I researched with UC Berkeley RISELab on{' '}
               <Link
                 href="https://www.usenix.org/conference/osdi20/presentation/dauterman-dory"
                 target="_blank"
@@ -97,9 +117,9 @@ const Main = ({ setActivePage }: Props) => {
               Climbing
             </Typography>
             <Typography variant="body1">
-              I spend most of my free time rock climbing. I do bouldering, sport climbing and
-              trad/alpine climbing. Some of my favorite areas include Yosemite, Red Rock Canyon and
-              Lake Tahoe. I log my adventures on my{' '}
+              I spend most of my free time rock climbing. I enjoy all types of climbing: boulder,
+              sport, trad/traditional and alpine. Some of my favorite areas include Yosemite, Red
+              Rock Canyon and Lake Tahoe. I log most of my adventures on my{' '}
               <Link
                 href="https://www.mountainproject.com/user/200439642/ellen-luo"
                 target="_blank"
@@ -110,9 +130,10 @@ const Main = ({ setActivePage }: Props) => {
               profile.
             </Typography>
             <Typography variant="body1">
-              I also spend time climbing and exploring mountains. Some of my favorite mountain
-              ranges include the Cascades, the Sierras and the Rockies. I hope to dive more into
-              splitboard-mountaineering and ice climbing in the future.
+              I also spend time climbing and exploring mountains. Some of my favorite places include
+              the prominent, glaciated volcanoes of the Cascades, and the awe-inspiring granite
+              peaks of the Sierras. I hope to dive more into splitboard-mountaineering and ice
+              climbing in the future.
             </Typography>
             <Typography variant="body1">
               Photos of my climbing adventures can be found on my{' '}
