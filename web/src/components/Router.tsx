@@ -9,8 +9,8 @@ type Props = {
 
 const Router = ({ setActivePage }: Props) => (
   <Routes>
-    <Route element={<Main setActivePage={setActivePage} />} path="/home" />
-    <Route path="*" element={<Navigate to="/home" replace />} />
+    <Route element={<Main setActivePage={setActivePage} />} path="/" />
+    <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
 )
 
