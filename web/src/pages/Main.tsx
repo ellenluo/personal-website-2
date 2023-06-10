@@ -15,6 +15,8 @@ import { Element } from 'react-scroll'
 
 import { scrollTo } from '../utils'
 
+import styles from './Main.module.css'
+
 type Props = {
   setActivePage: (page: string) => {}
 }
@@ -46,23 +48,33 @@ const Main = ({ setActivePage }: Props) => {
       <Element name="home">
         <Container maxWidth="md" sx={{ height: '100vh', padding: '32px' }}>
           <Stack spacing={3} sx={{ marginTop: '20vh' }}>
-            <Typography variant="h4">Hi, I'm Ellen.</Typography>
-            <Typography variant="body1">
-              I'm a software engineer, climber and mountaineer based out of the SF Bay Area,
-              California.
-            </Typography>
-            <ImageList cols={3}>
-              <ImageListItem>
-                <img src="/assets/scarface.jpg" />
-              </ImageListItem>
-              <ImageListItem>
-                <img src="/assets/professional.jpg" />
-              </ImageListItem>
-              <ImageListItem>
-                <img src="/assets/lassen.jpg" />
-              </ImageListItem>
-            </ImageList>
-            <ArrowButton targetPage="work" up={false} />
+            <div className={styles.fade_title}>
+              <Typography className="fade-in" variant="h4">
+                Hi, I'm Ellen.
+              </Typography>
+            </div>
+            <div className={styles.fade_body}>
+              <Typography variant="body1">
+                I'm a software engineer, climber and mountaineer based out of the SF Bay Area,
+                California.
+              </Typography>
+            </div>
+            <div className={styles.fade_images}>
+              <ImageList cols={3}>
+                <ImageListItem>
+                  <img src="/assets/scarface.jpg" />
+                </ImageListItem>
+                <ImageListItem>
+                  <img src="/assets/professional.jpg" />
+                </ImageListItem>
+                <ImageListItem>
+                  <img src="/assets/lassen.jpg" />
+                </ImageListItem>
+              </ImageList>
+            </div>
+            <div className={styles.fade_arrow}>
+              <ArrowButton targetPage="work" up={false} />
+            </div>
           </Stack>
         </Container>
       </Element>
